@@ -61,4 +61,4 @@ export class StoreService {
 
 ### Repository 패턴
 - 데이터베이스에 관련된 일(작업)을 서비스에서 하지 않고, Repository라는 별도의 클래스에서 하는 것을 레포짓토리 패턴이라고 한다. 
-- 
+- 생성한 Repository를 다른 곳에서도 사용하기 위해서는 module에서 import해줘야 한다.
