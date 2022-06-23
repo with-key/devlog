@@ -83,6 +83,7 @@ export class CreateStoreDto {
   ownerName: string;
 }
 ```
+- `@InputType` 또는 `@ArgsType`을 사용한다.
 - 계층 간 데이터 교환을 위한 객체이다.
 - DB 에서 데이터를 얻어 Service나 Controller 등으로 보낼 때 사용하는 객체를 말한다. 
 - interface나 class를 이용해서 정의될 수 있으나, Nest에서는 class를 이용할 것을 추천하고 있다. **따라서 DTO자체가 Request parameter의 타입이 된다.**
