@@ -96,3 +96,15 @@ export class CreateStoreDto {
   ```
 - DTO를 사용하는 이유는 데이터의 유효성을 체크하는데 효율적이고, 더 안정적인 코드로 만들어주며 그 자체가 데이터의 타입이 되기도 한다. 보통 `class-validator`를 이용해서 유효성 검증을 한다.
 
+### Schema
+```ts
+@ObjectType()1
+export class User {
+  @Field(type => String) // 이 필드의 타입을 지정한다
+  name: string; // 타입스크립트의 타입을 지정한다
+
+  @Field(type => String)
+  email: string;
+}
+```
+스키마란 서버에서 어떤 필드를 선택할 수 있는지, 어떤 종류의 객체를 반환 할 수 있는지, 하위 객체에서 사용할 수 있는 필드는 무엇인지를 나타낸 것이다. GraphQL의 가장 기본적인 구성요소는 `@ObjectType`이다. `@ObjectType`는 서비스에서 가져올 수 있는 객체의 종류와 그 객체의 필드를 나타낸다. 모든 `@ObjectType`는 최소 하나의 `@Field`를 가지고 있다.
